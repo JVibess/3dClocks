@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import ClockOne from "./Components/ClockOne/ClockOne";
+import ClockTwo from "./Components/ClockTwo/ClockTwo";
+import ClockThree from "./Components/ClockThree/ClockThree";
+import Carousel from "./Components/Carousel/Carousel";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<ClockOne />} />
+        <Route path="/ClockTwo" element={<ClockTwo />} />
+        <Route path="/ClockThree" element={<ClockThree />} />
+      </Routes>
+    </>
   );
 }
 
